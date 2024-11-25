@@ -117,7 +117,7 @@ https://localhost:7196/api/Autor/CriarAutor
 ```json
 {
   "nome": "David Goggins",
-  "dataNascimento": "1980-11-23",
+  "dataNascimento": "2024-11-25",
   "pais": "EUA"
 }
 ```
@@ -264,14 +264,19 @@ https://localhost:7196/api/Livro/CriarLivros
 ```json
 {
   "dados": [
-    {
+    {      
       "id": 1,
-      "titulo": "NADA PODE ME FERIR",
+      "titulo": "Nunca é Hora de Parar",
       "autor": {
         "id": 1,
         "nome": "David Goggins",
         "dataNascimento": "2000-01-05T00:00:00",
-        "pais": "Brasil"      
+        "pais": "Brasil"
+      },
+      "categoria": "Mentalidade",
+      "dataPublicacao": "2024-11-25T16:41:11.756Z",
+      "preco": 100,
+      "quantidadeEstoque": 4
     }
   ],
   "mensagem": "",
