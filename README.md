@@ -53,8 +53,8 @@ Executar: Update-Database
 ```
 
 <p>6 - Para Executar os teste basta abrir o "Gerenciar de Testes" e clicar em "Executar todos os testes na exibição"</p> 
-<br />
-**************************************************************************************************************************************************
+
+
 <br />
 <h2>Autenticação e Autorização</h2>                                                                                                                       
 <p>Autenticação por JWT (JSON Web Token).</p>
@@ -64,8 +64,8 @@ Executar: Update-Database
 <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
 <p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
 
-<br />
-**************************************************************************************************************************************************************
+
+
 <br /><br />
 <h2 id="routes">📍 API Endpoints - Usuários</h2>
 <h3>Cadastro de Usuário/Administrador</h3>
@@ -115,8 +115,7 @@ https://localhost:7196/api/Usuario/Login
   "status": true
 }
 ```
-<br />
-**************************************************************************************************************************************************************
+
 <br /><br />
 <h2 id="routes">📍 API Endpoints - Autor</h2>
 <h3>Listar Autores</h3>
@@ -248,8 +247,7 @@ https://localhost:7196/api/Autor/ExcluirAutor{idAutor}
   "status": true
 }
 ```
-<br />
-**************************************************************************************************************************************************************
+
 <br /><br />
 <h2 id="routes">📍 API Endpoints - Livros</h2>
 <h3>Listar Livros</h3>
