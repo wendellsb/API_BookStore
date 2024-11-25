@@ -15,7 +15,7 @@
 <p>Autenticação por JWT (JSON Web Token).</p>
 <p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
 
-<h3>Papéis de usuários:</h3>
+<h2>Papéis de usuários:</h2>
 <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
 <p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
 <br />
@@ -71,15 +71,18 @@ https://localhost:7196/api/Usuario/Login
 
 <br /><br /><br />
 <h2 id="routes">📍 API Endpoints - Autor</h2>
-<br /><br />
 <h3>Listar Autores</h3>
 
 ```bash
-https://localhost:7196/api/Usuario/Login
+https://localhost:7196/api/Autor/ListarAutores
 ```
 
-**NO REQUEST**
-
+**REQUEST**
+```json
+{
+  Não precisa de um parametro para busca!
+}
+```
 
 **RESPONSE**
 ```json
@@ -103,6 +106,7 @@ https://localhost:7196/api/Usuario/Login
 }
 ```
 
+<br /><br />
 <h3>Cadastro de Autor</h3>
 
 ```bash
@@ -130,6 +134,147 @@ https://localhost:7196/api/Autor/CriarAutor
     }
   ],
   "mensagem": "Autor criado com sucesso!",
+  "status": true
+}
+```
+
+<br /><br />
+<h3>Edição de Autor</h3>
+
+```bash
+https://localhost:7196/api/Autor/EditarAutor
+```
+
+**REQUEST**
+```json
+{
+   "id": 1,
+   "nome": "David Goggins",
+   "dataNascimento": "2000-01-05",
+   "pais": "Brasil"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [    
+    {
+      "id": 1,
+      "nome": "David Goggins",
+      "dataNascimento": "2000-01-05T00:00:00",
+      "pais": "Brasil"
+    }
+  ],
+  "mensagem": "Autor criado com sucesso!",
+  "status": true
+}
+```
+
+<br /><br />
+<h3>Exclusão de Autor</h3>
+
+```bash
+https://localhost:7196/api/Autor/ExcluirAutor{idAutor}
+```
+
+**REQUEST**
+```json
+{
+   "id": 2
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [    
+    {
+      "id": 1,
+      "nome": "David Goggins",
+      "dataNascimento": "2000-01-05T00:00:00",
+      "pais": "Brasil"
+    }
+  ],
+  "mensagem": "Autor criado com sucesso!",
+  "status": true
+}
+```
+
+<br /><br /><br />
+<h2 id="routes">📍 API Endpoints - Livros</h2>
+<h3>Listar Livros</h3>
+
+```bash
+https://localhost:7196/api/Livro/ListarLivros
+```
+
+**REQUEST**
+```json
+{
+  Não precisa de um parametro para busca!
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [
+    {
+      "id": 1,
+      "titulo": "NADA PODE ME FERIR",
+      "autor": {
+        "id": 1,
+        "nome": "David Goggins",
+        "dataNascimento": "2000-01-05T00:00:00",
+        "pais": "Brasil"
+      },
+      "categoria": "Mentalidade",
+      "dataPublicacao": "2013-04-11T13:04:28.93",
+      "preco": 45,
+      "quantidadeEstoque": 8
+    }
+  ],
+  "mensagem": "Todos os autores foram listados!",
+  "status": true
+}
+```
+<br /><br />
+<h3>Criar Livros</h3>
+
+```bash
+https://localhost:7196/api/Livro/CriarLivros
+```
+
+**REQUEST**
+```json
+{
+ "titulo": "NADA PODE ME FERIR",
+  "autor": {
+    "id": 1
+  },
+  "categoria": "Mentalidade",
+  "dataPublicacao": "2013-04-11",
+  "preco": 50,
+  "quantidadeEstoque": 10
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [
+    {
+      "id": 1,
+      "titulo": "NADA PODE ME FERIR",
+      "autor": {
+        "id": 1,
+        "nome": "David Goggins",
+        "dataNascimento": "2000-01-05T00:00:00",
+        "pais": "Brasil"      
+    }
+  ],
+  "mensagem": "",
   "status": true
 }
 ```
