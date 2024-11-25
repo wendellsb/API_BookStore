@@ -9,7 +9,8 @@
 <p>Gerenciamento de busca de livros pelo titulo, filtro por categoria, estoque e compras.</p>
 <p>Centralização de error com Middleware.</p>
 <p>Testes unitários com xUnit utilizando Moq.</p>
-
+***************************************************
+<br /><br /><br />
 <h2 id="routes">📍 API Endpoints</h2>
 
 <h3>Usuários</h3>
@@ -17,10 +18,10 @@
 <p>Autenticação por JWT (JSON Web Token).</p>
 <p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
 
-<h3>Papéis de usuários:</p>
+<h3>Papéis de usuários:</h3>
 <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
-<p>>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
-
+<p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
+<br />
 <h3>Cadastro de Usuário/Administrador</h3>
 
 ```bash
@@ -45,6 +46,7 @@ https://localhost:7196/api/Usuario/Registrar
   "status": true
 }
 ```
+<br /><br /><br />
 <h3>Login de Usuários</h3>
 
 ```bash
@@ -67,3 +69,5 @@ https://localhost:7196/api/Usuario/Login
   "status": true
 }
 ```
+
+<br /><br /><br />
