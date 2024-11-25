@@ -53,8 +53,6 @@ Executar: Update-Database
 ```
 
 <p>6 - Para Executar os teste basta abrir o "Gerenciar de Testes" e clicar em "Executar todos os testes na exibição"</p> 
-
-
 <br />
 **************************************************************************************************************************************************
 
@@ -66,8 +64,8 @@ Executar: Update-Database
 <h2>Papéis de usuários:</h2>
 <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
 <p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
-<br />
 
+<br />
 **************************************************************************************************************************************************************
 <br /><br />
 <h2 id="routes">📍 API Endpoints - Usuários</h2>
