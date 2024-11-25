@@ -55,7 +55,6 @@ Executar: Update-Database
 <p>6 - Para Executar os teste basta abrir o "Gerenciar de Testes" e clicar em "Executar todos os testes na exibição"</p> 
 <br />
 **************************************************************************************************************************************************
-
 <br />
 <h2>Autenticação e Autorização</h2>                                                                                                                       
 <p>Autenticação por JWT (JSON Web Token).</p>
