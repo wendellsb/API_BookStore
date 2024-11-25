@@ -10,25 +10,60 @@
 <p>Centralização de error com Middleware.</p>
 <p>Testes unitários com xUnit utilizando Moq.</p>
 
+<h2 id="routes">📍 API Endpoints</h2>
 
-<h3>Usuário</h3>
+<h3>Usuários</h3>
 Autenticação e Autorização
 Autenticação por JWT (JSON Web Token).
 Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.
 
-<p>Papéis de usuário:</p>
-Admin - Id = 2: CRUD completo em todos os recursos.
-Usuário comum - Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.
+<p>Papéis de usuários:</p>
+Admin   | Id = 2: CRUD completo em todos os recursos.
+Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.
 
-Cadastro de Usuários
-Dados do usuário:
-Id (int)
-Nome (string)
-Email (string)
-Senha (hash - string)
-Data de Criação (datetime)
+<h3>Cadastro de Usuário/Administrador</h3>
 
-Login de Usuários
-Dados do login:
-Email (string)
-Senha (hash - string)
+```bash
+https://localhost:7196/api/Usuario/Registrar
+```
+
+**REQUEST**
+```json
+{
+  "nome": "wendell",
+  "email": "wendell@example.com",
+  "senha": "wendell",
+  "cargo": 2
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": null,
+  "mensagem": "Usuario criado com sucesso!",
+  "status": true
+}
+```
+<p>Login de Usuários</p>
+
+```bash
+https://localhost:7196/api/Usuario/Login
+```
+
+**REQUEST**
+```json
+{
+  "email": "string",
+  "senha": "string"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJOb21lIjoiSnVsaWFueSBBbHZpbSIsIkVtYWlsIjoianVsaWFueUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNzMyNTUzMDgxfQ.wpPm7hHCoS3JIy1JJvashOm8vbscwcUL_GFaQQlUwUSQfPwS_gwpQeZG9WXvkgpG85ktGws_v4zDZRt8rgnbKA",
+  "mensagem": "Usuário logado com sucesso!",
+  "status": true
+}
+```
