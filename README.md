@@ -10,6 +10,51 @@
 <p>Centralização de error com Middleware.</p>
 <p>Testes unitários com xUnit utilizando Moq.</p>
 
+<br />
+
+<h2>Tecnologias</h2>
+<p>.Net 8</p>
+<p>ASP.NET Core</p>
+<p>Entity Framework Core</p>
+<p>JWT - JSON Web Token</p>
+<p>Swagger UI</p>
+<p>xUnit</p>
+<p>Moq</p>
+<p>SQL Server</p>
+
+<br />
+
+<h2>Boas Praticas</h2>
+<p>Desing Patterns - Repository</p>
+<p>SOLID</p>
+<p>Middleware</p>
+
+<br />
+
+<h2>Configuração do ambiente</h2>
+<p>Para testar</p> 
+<p>1 - Clonar o repositorio em uma pasta local. </p> 
+<p>2 - Iniciar o Projeto. </p> 
+<p>3 - Abrir o arquivo appsettings.json</p>>
+<p>4 - Editar a ConnectionStrings de acordo com a sua máquina. </p> 
+
+```bash
+,
+  "ConnectionStrings": {
+    "DefaultConnection": "server= COLOQUE_SEU_SERVIDOR_AQUI; database= Livraria; trusted_connection=true; trustservercertificate=true"
+  },
+```
+
+
+<p>5 - Abrir o "Console de Gerenciador de Pacotes"</p> 
+
+```bash
+Executar: Update-Database
+```
+
+
+
+
 <br /><br />
 <h2>Autenticação e Autorização</h2>
 <p>Autenticação por JWT (JSON Web Token).</p>
@@ -285,10 +330,10 @@ https://localhost:7196/api/Livro/CriarLivro
 ```
 
 <br /><br />
-<h3>Criar Livros</h3>
+<h3>Editar Livros</h3>
 
 ```bash
-https://localhost:7196/api/Livro/CriarLivro
+https://localhost:7196/api/Livro/EditarLivro
 ```
 
 **REQUEST**
