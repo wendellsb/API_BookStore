@@ -1,5 +1,5 @@
 <h1 align="center" style="font-weight: bold;"># API_BookStore 💻</h1>
- **************************************************************************************************************************************************************
+ 
 <p align="center">
     <b>O projeto consiste no desenvolvimento de uma API RESTful em .NET 8.</b>
 </p>
@@ -9,7 +9,7 @@
 <p>Gerenciamento de busca de livros pelo titulo, filtro por categoria, estoque e compras.</p>
 <p>Centralização de error com Middleware.</p>
 <p>Testes unitários com xUnit utilizando Moq.</p>
-**************************************************************************************************************************************************************
+
 <br />
 
 <h2>Tecnologias</h2>
@@ -21,18 +21,18 @@
 <p>xUnit</p>
 <p>Moq</p>
 <p>SQL Server</p>
-**************************************************************************************************************************************************************
+
 <br />
 
 <h2>Boas Praticas</h2>
 <p>Desing Patterns - Repository</p>
 <p>SOLID</p>
 <p>Middleware</p>
-**************************************************************************************************************************************************************
+
 <br />
 
 <h2>Configuração do ambiente</h2>
-<p>Para testar</p> 
+<p>Para testar a API</p> 
 <p>1 - Clonar o repositorio em uma pasta local. </p> 
 <p>2 - Iniciar o Projeto. </p> 
 <p>3 - Abrir o arquivo appsettings.json</p>
@@ -52,7 +52,7 @@
 Executar: Update-Database
 ```
 
-
+<p>6 - Para Executar os teste basta abrir o "Gerenciar de Testes" e clicar em "Executar todos os testes na exibição"</p> 
 
 
 <br /><br />
