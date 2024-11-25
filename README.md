@@ -9,12 +9,9 @@
 <p>Gerenciamento de busca de livros pelo titulo, filtro por categoria, estoque e compras.</p>
 <p>Centralização de error com Middleware.</p>
 <p>Testes unitários com xUnit utilizando Moq.</p>
-***************************************************
-<br /><br /><br />
-<h2 id="routes">📍 API Endpoints</h2>
 
-<h3>Usuários</h3>
-<p>Autenticação e Autorização</p>
+<br /><br />
+<h2>Autenticação e Autorização</h2>
 <p>Autenticação por JWT (JSON Web Token).</p>
 <p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
 
@@ -22,6 +19,8 @@
 <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
 <p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
 <br />
+
+<h2 id="routes">📍 API Endpoints - Usuários</h2>
 <h3>Cadastro de Usuário/Administrador</h3>
 
 ```bash
@@ -46,7 +45,7 @@ https://localhost:7196/api/Usuario/Registrar
   "status": true
 }
 ```
-<br /><br /><br />
+<br /><br />
 <h3>Login de Usuários</h3>
 
 ```bash
@@ -71,3 +70,66 @@ https://localhost:7196/api/Usuario/Login
 ```
 
 <br /><br /><br />
+<h2 id="routes">📍 API Endpoints - Autor</h2>
+<br /><br />
+<h3>Listar Autores</h3>
+
+```bash
+https://localhost:7196/api/Usuario/Login
+```
+
+**NO REQUEST**
+
+
+**RESPONSE**
+```json
+{
+  "dados": [
+    {
+      "id": 1,
+      "nome": "David Goggins",
+      "dataNascimento": "1980-11-23T10:46:40.191",
+      "pais": "EUA"
+    },
+    {
+      "id": 2,
+      "nome": "George R. R. Martin",
+      "dataNascimento": "1948-11-23T11:37:20.144",
+      "pais": "EUA"
+    }
+  ],
+  "mensagem": "Todos os autores foram listados!",
+  "status": true
+}
+```
+
+<h3>Cadastro de Autor</h3>
+
+```bash
+https://localhost:7196/api/Autor/CriarAutor
+```
+
+**REQUEST**
+```json
+{
+  "nome": "David Goggins",
+  "dataNascimento": "1980-11-23",
+  "pais": "EUA"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [    
+    {
+      "id": 1,
+      "nome": "David Goggins",
+      "dataNascimento": "2024-11-25T00:00:00",
+      "pais": "EUA"
+    }
+  ],
+  "mensagem": "Autor criado com sucesso!",
+  "status": true
+}
+```
