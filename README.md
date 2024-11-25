@@ -243,7 +243,7 @@ https://localhost:7196/api/Livro/ListarLivros
 <h3>Criar Livros</h3>
 
 ```bash
-https://localhost:7196/api/Livro/CriarLivros
+https://localhost:7196/api/Livro/CriarLivro
 ```
 
 **REQUEST**
@@ -254,7 +254,7 @@ https://localhost:7196/api/Livro/CriarLivros
     "id": 1
   },
   "categoria": "Mentalidade",
-  "dataPublicacao": "2013-04-11",
+  "dataPublicacao": "2024-11-25",
   "preco": 50,
   "quantidadeEstoque": 10
 }
@@ -266,7 +266,7 @@ https://localhost:7196/api/Livro/CriarLivros
   "dados": [
     {      
       "id": 1,
-      "titulo": "Nunca é Hora de Parar",
+      "titulo": "NADA PODE ME FERIR",
       "autor": {
         "id": 1,
         "nome": "David Goggins",
@@ -275,11 +275,223 @@ https://localhost:7196/api/Livro/CriarLivros
       },
       "categoria": "Mentalidade",
       "dataPublicacao": "2024-11-25T16:41:11.756Z",
-      "preco": 100,
-      "quantidadeEstoque": 4
+      "preco": 50,
+      "quantidadeEstoque": 10
     }
   ],
   "mensagem": "",
+  "status": true
+}
+```
+
+<br /><br />
+<h3>Criar Livros</h3>
+
+```bash
+https://localhost:7196/api/Livro/CriarLivro
+```
+
+**REQUEST**
+```json
+{
+  "id": 1,
+  "titulo": "NADA PODE ME FERIR",
+  "autor": {
+    "id": 1
+  },
+  "categoria": "Mindset",
+  "dataPublicacao": "2024-11-25T16:56:38.957Z",
+  "preco": 40,
+  "quantidadeEstoque": 10
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [
+    {
+      "id": 1,
+      "titulo": "NADA PODE ME FERIR",
+      "autor": {
+        "id": 1,
+        "nome": "David Goggins",
+        "dataNascimento": "2000-01-05T00:00:00",
+        "pais": "Brasil"
+      },
+      "categoria": "Mindset",
+      "dataPublicacao": "2024-11-25T16:56:38.957Z",
+      "preco": 40,
+      "quantidadeEstoque": 10
+    }
+  ],
+  "mensagem": "",
+  "status": true
+}
+```
+
+<br /><br />
+<h3>Exclusão de Livro</h3>
+
+```bash
+https://localhost:7196/api/Livro/ExcluirLivro{idLivro}
+```
+
+**REQUEST**
+```json
+{
+   "id": 1
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [
+   {
+      "id": 2,
+      "titulo": "As cronicas de Gelo e Fogo",
+      "autor": {
+        "id": 2,
+        "nome": "George R. R. Martin",
+        "dataNascimento": "1948-11-23T11:37:20.144",
+        "pais": "EUA"
+      },
+      "categoria": "Fantasia",
+      "dataPublicacao": "1948-11-23T11:37:20.144",
+      "preco": 70,
+      "quantidadeEstoque": 8
+    }
+  ],
+  "mensagem": "Livro removido com sucesso!",
+  "status": true
+}
+```
+
+
+<br /><br />
+<h3>Busca de Livro por título</h3>
+
+```bash
+https://localhost:7196/api/Livro/BuscarLivrosTitulo/{titulo}
+```
+
+**REQUEST**
+```json
+{
+   "titulo": "As cronicas de Gelo e Fogo"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": {
+    "id": 2,
+    "titulo": "As cronicas de Gelo e Fogo",
+    "autor": {
+      "id": 2,
+      "nome": "George R. R. Martin",
+      "dataNascimento": "1948-11-23T11:37:20.144",
+      "pais": "EUA"
+    },
+    "categoria": "Fantasia",
+    "dataPublicacao": "1948-11-23T11:37:20.144",
+    "preco": 70,
+    "quantidadeEstoque": 8
+  },
+  "mensagem": "Livro localizado!",
+  "status": true
+}
+```
+
+<br /><br />
+<h3>Busca de Livros por categoria</h3>
+
+```bash
+https://localhost:7196/api/Livro/BuscarLivroCategoria/{categoria}
+```
+
+**REQUEST**
+```json
+{
+   "categoria": "Fantasia"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [
+    {
+      "id": 2,
+      "titulo": "As cronicas de Gelo e Fogo",
+      "autor": {
+        "id": 2,
+        "nome": "George R. R. Martin",
+        "dataNascimento": "1948-11-23T11:37:20.144",
+        "pais": "EUA"
+      },
+      "categoria": "Fantasia",
+      "dataPublicacao": "1948-11-23T11:37:20.144",
+      "preco": 70,
+      "quantidadeEstoque": 8
+    },
+    {
+      "id": 3,
+      "titulo": "A Tormenta das Espadas",
+      "autor": {
+        "id": 2,
+        "nome": "George R. R. Martin",
+        "dataNascimento": "1948-11-23T11:37:20.144",
+        "pais": "EUA"
+      },
+      "categoria": "Fantasia",
+      "dataPublicacao": "2000-08-08T13:19:55.852",
+      "preco": 50,
+      "quantidadeEstoque": 5
+    }
+  ],
+  "mensagem": "Categoria encontrada!",
+  "status": true
+}
+```
+
+<br /><br />
+<h3>Compra de Livros</h3>
+
+```bash
+https://localhost:7196/api/Livro/CompraLivros/{idLivro}{quantidade}
+```
+
+**REQUEST**
+```json
+{
+   "id": "3",
+   "quantidade": "4"
+}
+```
+
+**RESPONSE**
+```json
+{
+  "dados": [    
+    {
+      "id": 3,
+      "titulo": "A Tormenta das Espadas",
+      "autor": {
+        "id": 2,
+        "nome": "George R. R. Martin",
+        "dataNascimento": "1948-11-23T11:37:20.144",
+        "pais": "EUA"
+      },
+      "categoria": "Fantasia",
+      "dataPublicacao": "2000-08-08T13:19:55.852",
+      "preco": 50,
+      "quantidadeEstoque": 1
+    }
+  ],
+  "mensagem": "Livro comprado com sucesso!",
   "status": true
 }
 ```
