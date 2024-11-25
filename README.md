@@ -13,13 +13,13 @@
 <h2 id="routes">📍 API Endpoints</h2>
 
 <h3>Usuários</h3>
-Autenticação e Autorização
-Autenticação por JWT (JSON Web Token).
-Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.
+<p>Autenticação e Autorização</p>
+<p>Autenticação por JWT (JSON Web Token).</p>
+<p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
 
-<p>Papéis de usuários:</p>
-Admin   | Id = 2: CRUD completo em todos os recursos.
-Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.
+<h3>Papéis de usuários:</p>
+<p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
+<p>>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
 
 <h3>Cadastro de Usuário/Administrador</h3>
 
@@ -45,7 +45,7 @@ https://localhost:7196/api/Usuario/Registrar
   "status": true
 }
 ```
-<p>Login de Usuários</p>
+<h3>Login de Usuários</h3>
 
 ```bash
 https://localhost:7196/api/Usuario/Login
