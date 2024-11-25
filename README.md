@@ -1,5 +1,5 @@
 <h1 align="center" style="font-weight: bold;"># API_BookStore 💻</h1>
- 
+ **************************************************************************************************************************************************************
 <p align="center">
     <b>O projeto consiste no desenvolvimento de uma API RESTful em .NET 8.</b>
 </p>
@@ -9,7 +9,7 @@
 <p>Gerenciamento de busca de livros pelo titulo, filtro por categoria, estoque e compras.</p>
 <p>Centralização de error com Middleware.</p>
 <p>Testes unitários com xUnit utilizando Moq.</p>
-
+**************************************************************************************************************************************************************
 <br />
 
 <h2>Tecnologias</h2>
@@ -21,14 +21,14 @@
 <p>xUnit</p>
 <p>Moq</p>
 <p>SQL Server</p>
-
+**************************************************************************************************************************************************************
 <br />
 
 <h2>Boas Praticas</h2>
 <p>Desing Patterns - Repository</p>
 <p>SOLID</p>
 <p>Middleware</p>
-
+**************************************************************************************************************************************************************
 <br />
 
 <h2>Configuração do ambiente</h2>
@@ -57,14 +57,14 @@ Executar: Update-Database
 
 <br /><br />
 **************************************************************************************************************************************************************
-* <h2>Autenticação e Autorização</h2>                                                                                                                       
-* <p>Autenticação por JWT (JSON Web Token).</p>
-* <p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
-*
-* <h2>Papéis de usuários:</h2>
-* <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
-* <p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
-*
+<h2>Autenticação e Autorização</h2>                                                                                                                       
+<p>Autenticação por JWT (JSON Web Token).</p>
+<p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
+
+<h2>Papéis de usuários:</h2>
+<p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
+<p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
+
 **************************************************************************************************************************************************************
 
 <h2 id="routes">📍 API Endpoints - Usuários</h2>
@@ -115,7 +115,7 @@ https://localhost:7196/api/Usuario/Login
   "status": true
 }
 ```
-
+**************************************************************************************************************************************************************
 <br /><br /><br />
 <h2 id="routes">📍 API Endpoints - Autor</h2>
 <h3>Listar Autores</h3>
@@ -247,7 +247,7 @@ https://localhost:7196/api/Autor/ExcluirAutor{idAutor}
   "status": true
 }
 ```
-
+**************************************************************************************************************************************************************
 <br /><br /><br />
 <h2 id="routes">📍 API Endpoints - Livros</h2>
 <h3>Listar Livros</h3>
