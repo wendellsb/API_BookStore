@@ -35,7 +35,7 @@
 <p>Para testar</p> 
 <p>1 - Clonar o repositorio em uma pasta local. </p> 
 <p>2 - Iniciar o Projeto. </p> 
-<p>3 - Abrir o arquivo appsettings.json</p>>
+<p>3 - Abrir o arquivo appsettings.json</p>
 <p>4 - Editar a ConnectionStrings de acordo com a sua máquina. </p> 
 
 ```bash
@@ -56,14 +56,16 @@ Executar: Update-Database
 
 
 <br /><br />
-<h2>Autenticação e Autorização</h2>
-<p>Autenticação por JWT (JSON Web Token).</p>
-<p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
-
-<h2>Papéis de usuários:</h2>
-<p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
-<p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
-<br />
+**************************************************************************************************************************************************************
+* <h2>Autenticação e Autorização</h2>                                                                                                                       
+* <p>Autenticação por JWT (JSON Web Token).</p>
+* <p>Apenas usuários autenticados podem acessar endpoints de CRUD de livros e autores.</p>
+*
+* <h2>Papéis de usuários:</h2>
+* <p>Admin   | Id = 2: CRUD completo em todos os recursos.</p>
+* <p>Usuário | Id = 1: acesso apenas a consultas de todos os livros e autores, filtro por categoria de livros e busca livro pelo titulo.</p>
+*
+**************************************************************************************************************************************************************
 
 <h2 id="routes">📍 API Endpoints - Usuários</h2>
 <h3>Cadastro de Usuário/Administrador</h3>
